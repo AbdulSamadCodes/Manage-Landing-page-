@@ -1,0 +1,248 @@
+/*=========================Custom Properties========================*/
+
+:root {
+  /*===========Colors============*/
+
+  --bright-red: hsl(12, 88%, 59%);
+  --dark-blue: hsl(228, 39%, 23%);
+
+  --dark-grayish-blue: hsl(227, 12%, 61%);
+  --very-dark-blue: hsl(233, 12%, 13%);
+  --very-pale-red: hsl(13, 100%, 96%);
+  --very-light-gray: hsl(0, 0%, 98%);
+
+  /*===========Typography=========*/
+
+  --font-family-vietnam-Pro: "Be Vietnam Pro", sans-serif;
+
+  --fs-1: 33px;
+
+  /*===========Spacing============*/
+
+  --section-spacing: 80px;
+}
+
+/*=========================Reset===========================*/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button,
+a,
+span,
+input {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+button,
+input {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 30px;
+  scrollbar-width: thin;
+}
+
+body {
+  font-family: var(--font-family-vietnam-Pro);
+  font-size: 16px;
+  background-color: var(--very-light-gray);
+}
+
+/*=========================Reused styles===========================*/
+
+.container {
+  padding-inline: 20px;
+}
+
+.section {
+  padding-block-start: var(--section-spacing);
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-items-center {
+  display: flex;
+  align-items: center;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.text-align {
+  --position: center;
+
+  text-align: var(--position);
+}
+
+.navbar,
+.header {
+  z-index: 10;
+}
+
+.section-title {
+  font-size: 30px;
+  color: var(--dark-blue);
+}
+
+.section-text {
+  color: var(--dark-grayish-blue);
+  margin-block: 15px 25px;
+  text-wrap: balance;
+  line-height: 1.7;
+}
+
+.btn {
+  max-width: max-content;
+  margin-inline: auto;
+  padding: 12px 25px;
+  background-color: var(--bright-red);
+  color: var(--very-pale-red);
+  font-family: var(--font-family-vietnam-Pro);
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 25px;
+  transition: background-color 200ms linear;
+  box-shadow: 0px 6px 7px hsla(12, 88%, 59%, 0.6);
+}
+
+.btn:is(:hover, :focus) {
+  background-color: hsla(12, 88%, 59%, 0.8);
+}
+
+.grid {
+  display: grid;
+}
+
+/*=========================Main styles===========================*/
+
+.header {
+  right: 0;
+  left: 0;
+}
+
+.header .container {
+  padding-block: 30px;
+}
+
+.header:has(.navbar.active) .nav-close-btn,
+.header:has(.navbar) .nav-open-btn {
+  display: block;
+}
+
+.header:has(.navbar) .nav-close-btn,
+.header:has(.navbar.active) .nav-open-btn {
+  display: none;
+}
+
+.navbar {
+  width: 330px;
+  max-width: 330px;
+  background-color: var(--very-light-gray);
+  top: 80px;
+  padding-block: 25px;
+  border-radius: 5px;
+  margin-inline: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.navbar.active {
+  display: block;
+}
+
+.nav-link {
+  padding-block: 12px;
+  color: var(--dark-blue);
+  font-weight: 700;
+}
+
+.overlay {
+  inset: 0;
+  background-color: hsla(233, 12%, 13%, 0.2);
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.header .btn {
+  display: none;
+}
+
+/*=================Hero section==============*/
+
+.hero .container {
+  gap: 15px;
+}
+
+.hero-title {
+  font-size: var(--fs-1);
+}
+
+/*=================About section==============*/
+
+.about .container {
+  gap: 20px;
+}
+
+.about-card-intro {
+  position: relative;
+}
+
+.card_counter {
+  padding: 6px 14px;
+  background-color: var(--bright-red);
+  border-radius: 16px;
+  color: var(--very-pale-red);
+  font-weight: 600;
+  max-width: max-content;
+  position: absolute;
+  left: -10px;
+  top: 0;
+}
+
+.about-card-title {
+  padding: 6px 45px;
+  color: var(--dark-blue);
+  font-weight: 700;
+  background-color: var(--very-pale-red);
+}
