@@ -7,6 +7,13 @@
   <!---===============Favicon link====================-->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
+  <!--========= Link Swiper's CSS================ -->
+
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
   <!-----=============Font css link====================-->
 
   <link rel="stylesheet" href="/Font/font.css">
@@ -35,31 +42,31 @@
 
       <ul class="navbar-list">
         <li class="nav-item">
-           <a href="" class="nav-link text-align" >
+           <a href="" class="nav-link text-align" data-nav-link>
             Pricing
            </a>
         </li>
 
         <li class="nav-item">
-          <a href="" class="nav-link text-align">
+          <a href="" class="nav-link text-align" data-nav-link>
             Product
           </a>
        </li>
 
        <li class="nav-item">
-        <a href="" class="nav-link text-align">
+        <a href="" class="nav-link text-align" data-nav-link>
           About Us
         </a>
        </li>
 
        <li class="nav-item">
-        <a href="" class="nav-link text-align" >
+        <a href="" class="nav-link text-align"data-nav-link >
           Careers
         </a>
        </li>
        
        <li class="nav-item">
-        <a href="" class="nav-link text-align">
+        <a href="" class="nav-link text-align" data-nav-link>
           Community
         </a>
        </li>
@@ -187,16 +194,19 @@
 
         <!--============Testimonial section================-->
 
-        <section class="testimonials  section">
+        <section class="testimonials  section ">
          
           <div class="container">
+           
             <h1 class="section-title text-align">
               What they’ve said
             </h1>
+
+
+          <div class="swiper mySwiper">
+            <div class="testimonials-wrapper swiper-wrapper">
   
-            <div class="testimonials-section">
-  
-              <div class="testimonial-card text-align">
+              <div class="testimonial-card text-align swiper-slide">
 
                  <div class="user-profile">
                      <img src="/images/avatar-ali.png" alt="">    
@@ -211,7 +221,7 @@
 
               </div>
   
-              <div class="testimonial-card text-align">
+              <div class="testimonial-card text-align swiper-slide">
                 
                 <div class="user-profile">
                     <img src="/images/avatar-anisha.png" alt="">    
@@ -227,7 +237,7 @@
              </div>
 
              
-             <div class="testimonial-card text-align">
+             <div class="testimonial-card text-align swiper-slide">
                 
               <div class="user-profile">
                   <img src="/images/avatar-richard.png" alt="">    
@@ -243,7 +253,7 @@
              </div>
 
                 
-             <div class="testimonial-card text-align">
+             <div class="testimonial-card text-align swiper-slide">
                 
               <div class="user-profile">
                   <img src="/images/avatar-shanai.png" alt="">    
@@ -260,6 +270,11 @@
 
             </div>
 
+            <div class= "swiper-pagination">
+
+            </div>
+          </div>
+
             <button class="btn">Get Started</button>
           </div>
         </section>
@@ -268,8 +283,10 @@
    </main>
    
     
+  <!--================Swiper Js link=============-->
+  <script src= "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
   <!---===============Custom script link====================-->
-  
   <script src="/script.js"></script>
   
 </div>

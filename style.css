@@ -15,7 +15,7 @@
 
   --font-family-vietnam-Pro: "Be Vietnam Pro", sans-serif;
 
-  --fs-1: 33px;
+  --fs-1: 30px;
 
   /*===========Spacing============*/
 
@@ -114,7 +114,7 @@ body {
 }
 
 .section-title {
-  font-size: 30px;
+  font-size: 27px;
   color: var(--dark-blue);
 }
 
@@ -145,6 +145,11 @@ body {
 
 .grid {
   display: grid;
+}
+
+.swiper,
+.swiper-pagination {
+  margin-block-start:30px;
 }
 
 /*=========================Main styles===========================*/
@@ -246,3 +251,43 @@ body {
   font-weight: 700;
   background-color: var(--very-pale-red);
 }
+
+/*==========Testimonial section========*/
+
+.testimonials .container{
+  overflow-x:hidden;
+}
+
+.user-profile{
+  width:60px;
+  height:60px;
+  overflow: hidden;
+  margin-inline: auto;
+}
+
+.user-name,
+.testimonials .btn {
+  margin-block:30px;
+}
+
+/*==========Swiper Js styles=========*/
+
+.swiper {
+  position: relative;
+}
+
+.swiper-pagination {
+   position: static;
+}
+
+.swiper-pagination-bullet {
+  border:2px solid var(--bright-red)  !important;
+  background-color:#fff;
+  width:13px;
+  height:13px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color:var(--bright-red);
+}
+
